@@ -9,7 +9,7 @@ const public_users = express.Router();
 //************************ ASYNC FUNCTIONS *****************************
 const getBooksAsync = async () => {
   try {
-    const response = await axios.get('http://localhost:5000')
+    const response = await axios.get('http://localhost:8080')
     console.log(response.data)
   } catch (error) {
     console.log(error)
@@ -18,7 +18,7 @@ const getBooksAsync = async () => {
 
 const getBooksDetailsByISBNAsync = async isbn => {
   try {
-    const response = await axios.get(`http://localhost:5000/isbn/${isbn}`)
+    const response = await axios.get(`http://localhost:8080/isbn/${isbn}`)
     console.log(response.data)
   } catch (error) {
     console.log(error)
@@ -27,7 +27,7 @@ const getBooksDetailsByISBNAsync = async isbn => {
 
 const getBooksDetailsByAuthorAsync = async author => {
   try {
-    const response = await axios.get(`http://localhost:5000/author/${author}`)
+    const response = await axios.get(`http://localhost:8080/author/${author}`)
     console.log(response.data)
   } catch (error) {
     console.log(error)
@@ -36,7 +36,7 @@ const getBooksDetailsByAuthorAsync = async author => {
 
 const getBooksDetailsByTitleAsync = async title => {
   try {
-    const response = await axios.get(`http://localhost:5000/title/${title}`)
+    const response = await axios.get(`http://localhost:8080/title/${title}`)
     console.log(response.data)
   } catch (error) {
     console.log(error)
